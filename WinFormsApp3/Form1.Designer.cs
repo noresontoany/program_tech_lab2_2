@@ -28,56 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtres = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            notifyIcon1 = new NotifyIcon(components);
+            label1 = new Label();
+            txtres = new TextBox();
+            button1 = new Button();
+            groupBox1 = new GroupBox();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
             // 
-            // txtres
+            // notifyIcon1
             // 
-            this.txtres.Location = new System.Drawing.Point(47, 50);
-            this.txtres.Name = "txtres";
-            this.txtres.Size = new System.Drawing.Size(100, 23);
-            this.txtres.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(47, 110);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Решаем";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.resClick);
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(175, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Сюда вводим числа";
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Right;
+            label1.Location = new Point(788, 27);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(177, 25);
+            label1.TabIndex = 2;
+            label1.Text = "Сюда вводим числа";
+            // 
+            // txtres
+            // 
+            txtres.Dock = DockStyle.Top;
+            txtres.Location = new Point(3, 27);
+            txtres.Margin = new Padding(4, 5, 4, 5);
+            txtres.Name = "txtres";
+            txtres.Size = new Size(785, 31);
+            txtres.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Bottom;
+            button1.Location = new Point(3, 333);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(785, 42);
+            button1.TabIndex = 1;
+            button1.Text = "Решаем";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += resClick;
+            // 
+            // groupBox1
+            // 
+            groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(txtres);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Dock = DockStyle.Fill;
+            groupBox1.Location = new Point(0, 0);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(968, 378);
+            groupBox1.TabIndex = 3;
+            groupBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 265);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtres);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(968, 378);
+            Controls.Add(groupBox1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "Form1";
+            Text = "№14";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
-
+        private NotifyIcon notifyIcon1;
+        private Label label1;
         private TextBox txtres;
         private Button button1;
-        private Label label1;
+        private GroupBox groupBox1;
     }
 }

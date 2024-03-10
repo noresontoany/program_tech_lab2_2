@@ -5,8 +5,6 @@ namespace WinFormsApp3
         public Form1()
         {
             InitializeComponent();
-
-
             txtres.Text = Properties.Settings.Default.str1.ToString();
         }
 
@@ -24,7 +22,7 @@ namespace WinFormsApp3
                 Properties.Settings.Default.str1 = str;
                 Properties.Settings.Default.Save();
 
-                var str2 = str.Split(" ");
+                string [] str2 = str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
                 for (int i = 0; i < str2.Length; i++)
                 {
