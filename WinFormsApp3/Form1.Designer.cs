@@ -34,6 +34,7 @@
             txtres = new TextBox();
             button1 = new Button();
             groupBox1 = new GroupBox();
+            clear = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,29 +47,25 @@
             // 
             label1.AutoSize = true;
             label1.Dock = DockStyle.Right;
-            label1.Location = new Point(788, 27);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(559, 18);
             label1.Name = "label1";
-            label1.Size = new Size(177, 25);
+            label1.Size = new Size(117, 15);
             label1.TabIndex = 2;
             label1.Text = "Сюда вводим числа";
             // 
             // txtres
             // 
             txtres.Dock = DockStyle.Top;
-            txtres.Location = new Point(3, 27);
-            txtres.Margin = new Padding(4, 5, 4, 5);
+            txtres.Location = new Point(2, 18);
             txtres.Name = "txtres";
-            txtres.Size = new Size(785, 31);
+            txtres.Size = new Size(557, 23);
             txtres.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Dock = DockStyle.Bottom;
-            button1.Location = new Point(3, 333);
-            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Location = new Point(485, 141);
             button1.Name = "button1";
-            button1.Size = new Size(785, 42);
+            button1.Size = new Size(192, 25);
             button1.TabIndex = 1;
             button1.Text = "Решаем";
             button1.UseVisualStyleBackColor = true;
@@ -77,23 +74,35 @@
             // groupBox1
             // 
             groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBox1.Controls.Add(clear);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(txtres);
             groupBox1.Controls.Add(label1);
             groupBox1.Dock = DockStyle.Fill;
             groupBox1.Location = new Point(0, 0);
+            groupBox1.Margin = new Padding(2, 2, 2, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(968, 378);
+            groupBox1.Padding = new Padding(2, 2, 2, 2);
+            groupBox1.Size = new Size(678, 227);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             // 
+            // clear
+            // 
+            clear.Location = new Point(485, 90);
+            clear.Name = "clear";
+            clear.Size = new Size(191, 23);
+            clear.TabIndex = 3;
+            clear.Text = "clear";
+            clear.UseVisualStyleBackColor = true;
+            clear.Click += clear_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(968, 378);
+            ClientSize = new Size(678, 227);
             Controls.Add(groupBox1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "№14";
             groupBox1.ResumeLayout(false);
@@ -107,5 +116,6 @@
         private TextBox txtres;
         private Button button1;
         private GroupBox groupBox1;
+        private Button clear;
     }
 }

@@ -22,20 +22,20 @@ namespace WinFormsApp3
                 Properties.Settings.Default.str1 = str;
                 Properties.Settings.Default.Save();
 
-                string [] str2 = str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string[] str2 = str.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
                 for (int i = 0; i < str2.Length; i++)
                 {
                     nums.Add(int.Parse(str2[i]));
                 }
-        
+
             }
-            catch (FormatException) 
+            catch (FormatException)
             {
-                return; 
+                return;
             }
 
-            
+
 
             var average = Logic.answer(nums);
 
@@ -59,7 +59,10 @@ namespace WinFormsApp3
                 return "нет таких чисел";
             }
         }
-        
 
+        private void clear_Click(object sender, EventArgs e)
+        {
+            txtres.Clear();
+        }
     }
 }
